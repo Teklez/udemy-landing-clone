@@ -12,7 +12,6 @@
         class="border-none bg-transparent min-w-[50px] flex justify-center items-center"
         aria-label="search-icon"
       >
-        <!-- Use Vue Icon instead of Font Awesome -->
         <SearchOutlined class="text-gray-500 text-lg" />
       </button>
       <input
@@ -27,36 +26,21 @@
 </template>
 
 <script>
-import { SearchOutlined } from "@ant-design/icons-vue"; // Import Vue Icon
+import { SearchOutlined } from "@ant-design/icons-vue";
 
 export default {
   components: {
-    SearchOutlined, // Register the icon component
+    SearchOutlined,
   },
   data() {
     return {
       barValue: "",
     };
   },
-  methods: {
-    searchPressed(barValue) {
-      this.$router.push({
-        path: "/Udemy-Clone-ReactJS/",
-        query: barValue ? { filter: barValue } : {},
-      });
-    },
-    keySearch(e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        this.searchPressed(this.barValue);
-      }
-    },
-  },
 };
 </script>
 
 <style scoped>
-/* Add custom styles for things like background-color (whitesmoke) if needed */
 .bg-whitesmoke {
   background-color: #f5f5f5;
 }
