@@ -29,7 +29,7 @@
       <!-- Search Bar Section -->
       <div class="flex-grow">
         <SearchBar />
-      </div>
+      </div>    
 
       <li class="hidden lg:block">
         <button type="button" aria-label="udemy-business" class="text-gray-900">
